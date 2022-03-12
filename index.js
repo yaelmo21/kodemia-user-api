@@ -51,7 +51,6 @@ server.delete('/heroe/:id', async(request, reply) => {
 
 
 const main = async() => {
-    console.log(global);
     await mongoose.connect(global.urlDb);
     await server.listen(global.port, global.host);
     console.log(`Escuchando en el puerto: ${global.port}`);
